@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="M02_ParkingVC">
+            <connections>
+                <outlet property="mapView" destination="jU8-So-Kot" id="1yP-Zq-jbu"/>
+                <outlet property="tableView" destination="ami-bt-WhY" id="9Yb-Ls-4Ff"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHy-bh-9vv">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BÃI ĐỖ XE GẦN NHẤT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-87-AFx">
+                            <rect key="frame" x="103.66666666666669" y="48" width="207" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86832088232040405" green="0.18121790885925293" blue="0.24128952622413635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="zgK-87-AFx" firstAttribute="width" secondItem="XHy-bh-9vv" secondAttribute="width" multiplier="0.5" id="1PL-LT-R4W"/>
+                        <constraint firstAttribute="height" constant="74" id="Wft-3a-JqF"/>
+                        <constraint firstItem="zgK-87-AFx" firstAttribute="centerX" secondItem="XHy-bh-9vv" secondAttribute="centerX" id="nfM-BX-aG8"/>
+                        <constraint firstAttribute="bottom" secondItem="zgK-87-AFx" secondAttribute="bottom" constant="8" id="tu8-Hd-OOE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jU8-So-Kot" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="74" width="414" height="294.33333333333331"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ami-bt-WhY">
+                    <rect key="frame" x="0.0" y="368.33333333333326" width="414" height="319.66666666666674"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ami-bt-WhY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5PH-lA-e5W"/>
+                <constraint firstAttribute="trailing" secondItem="XHy-bh-9vv" secondAttribute="trailing" id="7aQ-bV-8DD"/>
+                <constraint firstAttribute="bottom" secondItem="ami-bt-WhY" secondAttribute="bottom" constant="48" id="7gB-xW-nxP"/>
+                <constraint firstItem="jU8-So-Kot" firstAttribute="top" secondItem="XHy-bh-9vv" secondAttribute="bottom" id="MkI-YX-nkt"/>
+                <constraint firstItem="jU8-So-Kot" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="OMJ-US-iWN"/>
+                <constraint firstItem="XHy-bh-9vv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Yim-WS-h5X"/>
+                <constraint firstAttribute="trailing" secondItem="ami-bt-WhY" secondAttribute="trailing" id="Yq3-0c-jQi"/>
+                <constraint firstItem="jU8-So-Kot" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="iyg-zC-MKL"/>
+                <constraint firstItem="jU8-So-Kot" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ovX-ae-C5A"/>
+                <constraint firstItem="ami-bt-WhY" firstAttribute="top" secondItem="jU8-So-Kot" secondAttribute="bottom" id="pi7-kk-fRh"/>
+                <constraint firstItem="XHy-bh-9vv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rgl-so-WuU"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="143"/>
+        </view>
+    </objects>
+</document>

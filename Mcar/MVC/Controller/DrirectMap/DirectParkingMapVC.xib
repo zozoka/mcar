@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DirectParkingMapVC">
+            <connections>
+                <outlet property="mapView" destination="R7m-gb-dTv" id="zvT-NS-d5o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSe-js-z1m">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-exit.png" translatesAutoresizingMaskIntoConstraints="NO" id="sFJ-UX-3u6">
+                            <rect key="frame" x="8" y="46.5" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="E0s-s2-SMY"/>
+                                <constraint firstAttribute="width" constant="15" id="KAz-ld-l9F"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đường đến bãi đậu xe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-Ab-R25">
+                            <rect key="frame" x="75" y="43.5" width="225" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2B-jQ-ZUu">
+                            <rect key="frame" x="0.0" y="34" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="0gU-kZ-Su2"/>
+                                <constraint firstAttribute="height" constant="40" id="9K0-Ak-xIb"/>
+                            </constraints>
+                            <connections>
+                                <action selector="closeButtonTap:" destination="-1" eventType="touchUpInside" id="nvp-Ue-vGU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86832088230000004" green="0.1812179089" blue="0.24128952619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="o2B-jQ-ZUu" firstAttribute="leading" secondItem="OSe-js-z1m" secondAttribute="leading" id="Edk-J0-M5J"/>
+                        <constraint firstAttribute="bottom" secondItem="XT1-Ab-R25" secondAttribute="bottom" constant="10" id="JVg-OA-9dh"/>
+                        <constraint firstAttribute="bottom" secondItem="o2B-jQ-ZUu" secondAttribute="bottom" id="MzW-Fz-Amm"/>
+                        <constraint firstAttribute="height" constant="74" id="Q1Z-PT-eOW"/>
+                        <constraint firstItem="XT1-Ab-R25" firstAttribute="centerX" secondItem="OSe-js-z1m" secondAttribute="centerX" id="Zbc-l4-r1F"/>
+                        <constraint firstItem="sFJ-UX-3u6" firstAttribute="leading" secondItem="OSe-js-z1m" secondAttribute="leading" constant="8" id="jnN-2H-z6Y"/>
+                        <constraint firstItem="XT1-Ab-R25" firstAttribute="width" secondItem="OSe-js-z1m" secondAttribute="width" multiplier="0.6" id="oY4-ki-0G1"/>
+                        <constraint firstItem="sFJ-UX-3u6" firstAttribute="centerY" secondItem="XT1-Ab-R25" secondAttribute="centerY" id="uhb-YI-240"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7m-gb-dTv" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R7m-gb-dTv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="29Y-T4-uai"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="R7m-gb-dTv" secondAttribute="bottom" id="Jk4-cl-S5K"/>
+                <constraint firstItem="R7m-gb-dTv" firstAttribute="top" secondItem="OSe-js-z1m" secondAttribute="bottom" id="OLm-xo-kEm"/>
+                <constraint firstItem="OSe-js-z1m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qrU-Ar-AOw"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="OSe-js-z1m" secondAttribute="trailing" id="rIa-x1-rWW"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="R7m-gb-dTv" secondAttribute="trailing" id="ssr-XX-mwe"/>
+                <constraint firstItem="OSe-js-z1m" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uOj-aW-m4z"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-exit.png" width="20" height="20"/>
+    </resources>
+</document>

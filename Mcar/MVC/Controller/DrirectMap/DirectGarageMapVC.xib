@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DirectGarageMapVC">
+            <connections>
+                <outlet property="mapView" destination="tYT-Ag-jP7" id="K9A-ua-sud"/>
+                <outlet property="titleGarageLabel" destination="h5F-Ug-yIn" id="eJb-3x-KDr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqL-Dm-vGC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-exit.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yh6-MP-Glj">
+                            <rect key="frame" x="8" y="46.5" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="ET8-hC-X4c"/>
+                                <constraint firstAttribute="height" constant="15" id="z5d-CF-rEe"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GARAGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-Ug-yIn">
+                            <rect key="frame" x="75" y="43.5" width="225" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYV-PB-a9h">
+                            <rect key="frame" x="0.0" y="34" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="9vZ-Ho-4Tq"/>
+                                <constraint firstAttribute="height" constant="40" id="a4s-Z5-eRP"/>
+                            </constraints>
+                            <connections>
+                                <action selector="backButton:" destination="-1" eventType="touchUpInside" id="FYZ-wY-jla"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86832088230000004" green="0.1812179089" blue="0.24128952619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="gYV-PB-a9h" firstAttribute="leading" secondItem="mqL-Dm-vGC" secondAttribute="leading" id="6aD-II-64b"/>
+                        <constraint firstAttribute="height" constant="74" id="F53-pa-i9K"/>
+                        <constraint firstAttribute="bottom" secondItem="gYV-PB-a9h" secondAttribute="bottom" id="HCa-KP-DmC"/>
+                        <constraint firstItem="h5F-Ug-yIn" firstAttribute="centerX" secondItem="mqL-Dm-vGC" secondAttribute="centerX" id="MLG-ZG-Xdf"/>
+                        <constraint firstItem="h5F-Ug-yIn" firstAttribute="width" secondItem="mqL-Dm-vGC" secondAttribute="width" multiplier="0.6" id="UbG-hT-sQK"/>
+                        <constraint firstAttribute="bottom" secondItem="h5F-Ug-yIn" secondAttribute="bottom" constant="10" id="aJR-Ro-efB"/>
+                        <constraint firstItem="Yh6-MP-Glj" firstAttribute="leading" secondItem="mqL-Dm-vGC" secondAttribute="leading" constant="8" id="c3k-Ec-82U"/>
+                        <constraint firstItem="Yh6-MP-Glj" firstAttribute="centerY" secondItem="h5F-Ug-yIn" secondAttribute="centerY" id="yR6-jw-MXA"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYT-Ag-jP7" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mqL-Dm-vGC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="21d-0o-vYW"/>
+                <constraint firstItem="tYT-Ag-jP7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="EHS-EQ-uV6"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tYT-Ag-jP7" secondAttribute="trailing" id="HAS-br-MUV"/>
+                <constraint firstItem="mqL-Dm-vGC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JJ0-PA-OcB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="tYT-Ag-jP7" secondAttribute="bottom" id="gxj-1V-2a9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="mqL-Dm-vGC" secondAttribute="trailing" id="m38-0B-Uwo"/>
+                <constraint firstItem="tYT-Ag-jP7" firstAttribute="top" secondItem="mqL-Dm-vGC" secondAttribute="bottom" id="sPi-0q-zYZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="42" y="174"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-exit.png" width="20" height="20"/>
+    </resources>
+</document>
